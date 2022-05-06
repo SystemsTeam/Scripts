@@ -8,4 +8,4 @@ $DatetoBeDeleted = $CurrentDate.AddDays(-$DaysTOBeArchived)
 $files=Get-ChildItem $path -Recurse | Where-Object { $_.LastWriteTime -lt $DatetoBeDeleted }  
 Foreach ($file in $files){ 
 Remove-Item $file.FullName |out-null 
-Write-Host "Cleared the file "$file } -Recurse
+Write-Host "Cleared the file "$file }
